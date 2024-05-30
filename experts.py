@@ -13,6 +13,19 @@ class experts(Scene):
             expert = SVGMobject("images/expert_4 (2).svg").scale(2.5)
         return expert
     
+    def get_trusted_expert(self, x):
+        if x == 1:
+            expert = SVGMobject("images/expert_1 (2).svg").scale(2.5)
+        elif x == 2:
+            expert = SVGMobject("images/expert_2 (2).svg").scale(2.5)
+        elif x == 3:
+            expert = SVGMobject("images/expert_3 (2).svg").scale(2.5)
+        elif x == 4:
+            expert = SVGMobject("images/expert_4 (2).svg").scale(2.5)
+        overline = Line(expert.get_corner(UL) + UP*0.2, expert.get_corner(UR) + UP*0.2).set_color(DARK_BLUE)
+        overline.set_stroke(width=15)
+        return VGroup(expert, overline)
+    
     def designated_expert(self):
         expert = SVGMobject("images/designated_expert.svg").scale(2.5)
         return expert
