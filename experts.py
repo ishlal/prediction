@@ -30,6 +30,9 @@ class experts(Scene):
         expert = SVGMobject("images/designated_expert.svg").scale(2.5)
         return expert
 
+    def best_expert(self):
+        return SVGMobject("images/best_expert.svg").scale(2.5)
+
     def construct(self):
         expert = self.get_expert(1)
         expert.shift(LEFT*5)

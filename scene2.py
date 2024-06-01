@@ -61,7 +61,7 @@ class scene2(Scene):
         dim_character = light_character.LightCharacter().dim_on_character().scale(0.9).shift(DOWN*2.3 + LEFT*4.5)
         self.play(FadeOut(light_off), FadeIn(dim_character))
 
-        my_coin = coin.T.copy().scale(0.8).move_to(dim_character.get_center() + RIGHT*2.5)
+        my_coin = coin.T.copy().scale(0.6).move_to(dim_character.get_center() + RIGHT*1.2 + UP*1.2)
         self.play(FadeIn(my_coin))
         self.wait(2)
 
